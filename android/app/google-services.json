@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "149335024868",
+    "project_id": "bustime-22c77",
+    "storage_bucket": "bustime-22c77.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149335024868:android:3d0d7779461affb8ca78f1",
+        "android_client_info": {
+          "package_name": "com.example.bustime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAff63dazweOmVGOk6OLlBlP6ygjJyd6Ho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
