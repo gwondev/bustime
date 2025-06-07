@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'functions/time.dart';
+import 'functions/widget.dart';
 
 class TimetablePage extends StatelessWidget {
   final Map data;
@@ -11,21 +12,51 @@ class TimetablePage extends StatelessWidget {
     final List<String> week = (data['table_week'] ?? '').toString().split('@');
     final List<String> holi = (data['table_holi'] ?? '').toString().split('@');
 
-    final List<Widget> weekChips = week.map<Widget>((t) => Chip(label: Text(t))).toList();
-    final List<Widget> holiChips = holi.map<Widget>((t) => Chip(label: Text(t))).toList();
-
     return Scaffold(
-      appBar: AppBar(title: Text('${data['kr_name'] ?? ''}')),
-      body: ListView(
-        padding: EdgeInsets.all(16),
-        children: <Widget>[
-          printTime(),
-          Text('평일 시간표'),
-          Wrap(spacing: 10, children: weekChips),
-          SizedBox(height: 20),
-          Text('공휴일 시간표'),
-          Wrap(spacing: 10, children: holiChips),
-        ],
+      appBar: AppBar1('${data['kr_name'] ?? ''}'),
+      body: Center(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              printTime(),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center, // Row를 가운데로
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // 평일 시간표
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text('평일 시간표', textAlign: TextAlign.center),
+                      SizedBox(height: 10),
+                      ...week.map((t) => Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 4),
+                        child: Chip(label: Text(t)),
+                      )),
+                    ],
+                  ),
+                  SizedBox(width: 40),
+                  // 휴/공휴일 시간표
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text('휴/공휴일 시간표', textAlign: TextAlign.center),
+                      SizedBox(height: 10),
+                      ...holi.map((t) => Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 4),
+                        child: Chip(label: Text(t)),
+                      )),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

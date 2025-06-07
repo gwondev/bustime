@@ -27,16 +27,29 @@ class _StationSelectorPageState extends State<StationSelectorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('종점/기점 남은시간 표시 어플')),
-      body: Column(
-        children: [
-          printTime(),
-          Text2('정류장선택'),
-          ListTile(
-            title: Text('조선대 해오름관'),
-            onTap: () => navigateToChosunHaeorem(context, stations[0]),
+      appBar: AppBar1('종점/기점 남은시간 표시 어플'),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              printTime(),
+              SizedBox1(20),
+              Text2('정류장선택'),
+              SizedBox1(20),
+
+              ElevatedButton(
+                onPressed: () => navigateToChosunHaeorem(context, stations[0]),
+                child: Text1('조선대 해오름관'),
+              ),
+              SizedBox1(12),
+              ElevatedButton(
+                onPressed: () => navigateToBeUpadate(context, "tobeupadate"),
+                child: Text1('업데이트 예정입니다'),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
