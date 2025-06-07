@@ -18,6 +18,7 @@ class _ToBeUpdateState extends State<ToBeUpdate> {
       body: Center(
         child: Text2('To be Update')
       ),
+      bottomNavigationBar: BottomAppBar1(),
     );
   }
 }

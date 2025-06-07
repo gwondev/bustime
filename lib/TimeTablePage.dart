@@ -58,6 +58,7 @@ class TimetablePage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomAppBar1(),
     );
   }
 }

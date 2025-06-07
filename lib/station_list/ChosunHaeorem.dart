@@ -93,6 +93,7 @@ class _ChosunHaeoreumState extends State<ChosunHaeorem> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomAppBar1(),
     );
   }
 }

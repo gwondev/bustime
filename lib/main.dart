@@ -51,18 +51,7 @@ class _StationSelectorPageState extends State<StationSelectorPage> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text1('조선대학교 컴퓨터공학과 이성권'),
-              Text1('commit : 250608 0402'),
-            ],
-          ),
-        ),
-      ),
+      bottomNavigationBar: BottomAppBar1(),
 
     );
   }
