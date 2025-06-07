@@ -30,6 +30,7 @@ class _StationSelectorPageState extends State<StationSelectorPage> {
       appBar: AppBar1('종점/기점 남은시간 표시 어플'),
       body: Center(
         child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -37,7 +38,6 @@ class _StationSelectorPageState extends State<StationSelectorPage> {
               SizedBox1(20),
               Text2('정류장선택'),
               SizedBox1(20),
-
               ElevatedButton(
                 onPressed: () => navigateToChosunHaeorem(context, stations[0]),
                 child: Text1('조선대 해오름관'),
@@ -51,6 +51,19 @@ class _StationSelectorPageState extends State<StationSelectorPage> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text1('조선대학교 컴퓨터공학과 이성권'),
+              Text1('commit : 20250608 03:42'),
+            ],
+          ),
+        ),
+      ),
+
     );
   }
 }

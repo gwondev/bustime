@@ -21,7 +21,8 @@ tasks.register<Delete>("clean") {
 }
 
 plugins {
-
-    id("com.google.gms.google-services") version "4.4.2" apply false
-
+    // ❗ apply false는 사용하지 않으면 생략 가능
+    id("com.android.application") version "8.7.3" apply false
+    id("com.google.gms.google-services") version "4.3.15" apply false
 }
+

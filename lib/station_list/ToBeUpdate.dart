@@ -16,10 +16,7 @@ class _ToBeUpdateState extends State<ToBeUpdate> {
     return Scaffold(
       appBar: AppBar1('To Be Update'),
       body: Center(
-        child: Text(
-          'tobeupdate',
-          style: TextStyle(fontSize: 24),
-        ),
+        child: Text2('To be Update')
       ),
     );
   }
