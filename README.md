@@ -34,7 +34,6 @@
 - **Flutter**: 프론트엔드 앱 제작
 - **Firebase Firestore**: 버스 시간표 저장
 - **Firebase Authentication**: 인증 처리 (보안 룰 기반 접근 제어 가능)
-- **GitHub Actions**: Web 빌드시 자동 배포
 - **Firebase Hosting**: 웹 서비스 제공
 - **광주광역시 버스행정정보**: Firestore에 수동 등록된 버스 시간표의 출처
 
